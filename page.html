@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 两点与多点测距设计 </title>
+    <link rel="stylesheet" href="css/styles.css"> 
+    <script src="https://webapi.amap.com/maps?v=2.0&key=0bbbf307609fd860017400f912ccddce"></script>
+</head>
+<body>
+    <!-- 创建容器/包含地图和控制面板 -->
+    <div class="map-container">
+
+        <!-- 创建元素/显示地图 -->
+        <div id="map"></div>
+        <!-- 创建控制面板/包含输入框和按钮 -->
+        <div class="control-panel">
+            <!-- 创建输入框组/包含标签和输入框 -->
+            <div class="coordinate-input">
+                <label for="start-coord">起点坐标：</label>
+                <input type="text" id="start-coord" placeholder="131.413141,13.141314">
+            </div>
+            <div class="coordinate-input">
+                <label for="end-coord">终点坐标：</label>
+                <input type="text" id="end-coord" placeholder="131.413141,13.141314">
+            </div>
+            <button id="input-coord-btn">应用坐标</button>
+            <button id="distance-btn">两点测距</button>
+            <button id="multi-distance-btn">多点测距</button>
+            <button id="undo-btn">撤销上一步</button> 
+            <div id="coordinates">点击或拖动标记点获取坐标</div>
+            <!-- 创建元素/显示距离计算结果 -->
+            <div id="result-info"></div>
+        </div>
+
+        <!-- 创建元素/显示路线信息 -->
+        <div class="route-info" id="route-info"></div>
+
+        <!-- 创建容器/返回按钮 -->
+        <div class="d">
+            <a href="./index.html"><--返回</a>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
